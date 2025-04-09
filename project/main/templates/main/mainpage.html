@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Django 초간단 핵심 요약</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+      padding: 30px;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+    }
+    nav.navbar-container {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding: 15px 30px;
+      background-color: #ff9364;
+    }
+    a.navbar-link {
+      color: #5c3900;
+      font-size: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a.navbar-link:hover {
+      color: #111;
+    }
+    h1 {
+      color: #ff6600;
+      margin-top: 30px;
+    }
+    .item {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #fff;
+      border-left: 4px solid #ff6600;
+      box-shadow: 0 0 4px rgba(0,0,0,0.05);
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar-container">
+    <a class="navbar-link" href="{% url 'mainpage' %}">DGU_likelion_13th_hw</a>
+    <a class="navbar-link" href="{% url 'secondpage' %}">Second Page</a>
+  </nav>
+
+  <h1>Django 핵심 개념 요약</h1>
+
+  <div class="item">
+    <strong>1️⃣ URL 연결</strong>
+    <pre><code>path('', views.mainpage, name='mainpage')</code></pre>
+  </div>
+
+  <div class="item">
+    <strong>2️⃣ View 함수</strong>
+    <pre><code>def mainpage(request):
+    return render(request, 'main/mainpage.html')</code></pre>
+  </div>
+
+  <div class="item">
+    <strong>3️⃣ 템플릿 출력</strong>
+    <pre><code>&#123;&#123; 변수명 &#125;&#125;</code></pre>
+  </div>
+
+  <div class="item">
+    <strong>4️⃣ 템플릿 제어문</strong>
+    <pre><code>&#123;% if 조건 %&#125; ... &#123;% endif %&#125;
+&#123;% for item in list %&#125; ... &#123;% endfor %&#125;</code></pre>
+  </div>
+
+  <div class="item">
+    <strong>5️⃣ static 사용</strong>
+    <pre><code>&#123;% load static %&#125;
+&lt;link rel="stylesheet" href="&#123;% static 'main/style.css' %&#125;"&gt;</code></pre>
+  </div>
+
+  <div class="item">
+    <strong>6️⃣ 템플릿 재사용</strong>
+    <pre><code>&#123;% include 'shared/_navbar.html' %&#125;</code></pre>
+  </div>
+
+</body>
+</html>

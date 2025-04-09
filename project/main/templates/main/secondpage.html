@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>아기사자 자기소개!</title>
+  {% load static %}
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+      padding: 30px;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+    }
+    nav.navbar-container {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding: 15px 30px;
+      background-color: #ff9364;
+    }
+    a.navbar-link {
+      color: #5c3900;
+      font-size: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a.navbar-link:hover {
+      color: #111;
+    }
+    h1 {
+      color: #ff6600;
+      margin-top: 30px;
+    }
+    .item {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #fff;
+      border-left: 4px solid #ff6600;
+      box-shadow: 0 0 4px rgba(0,0,0,0.05);
+    }
+    a {
+      color: #ff6600;
+      font-weight: bold;
+    }
+    .profile-img {
+      display: block;
+      max-width: 300px;
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar-container">
+    <a class="navbar-link" href="{% url 'mainpage' %}">DGU_likelion_13th_hw</a>
+    <a class="navbar-link" href="{% url 'secondpage' %}">Second Page</a>
+  </nav>
+
+  <h1>👋 이민지 자기소개</h1>
+
+  <!-- <img src="images/logo.jpg" alt="이민지 사진" class="profile-img"> -->
+
+
+  <div class="item">
+    <strong>📌 MBTI:</strong> ISFP<br />
+    <strong>📱 Instagram:</strong> <a href="https://instagram.com/thisminji_" target="_blank">@thisminji_</a>
+  </div>
+
+  <div class="item">
+    <strong>📚 학력 / 경력:</strong><br />
+    • 2023 한국통신학회 아이디어 경진대회 대상<br />
+    • Ericsson-LG 인턴<br />
+    • 한이음 입선 수상
+  </div>
+
+  <div class="item">
+    <strong>💬 좌우명:</strong><br />
+    “인생 뭐 별거 있냐”
+  </div>
+
+</body>
+</html>
