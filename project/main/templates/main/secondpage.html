@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <title>아기사자 자기소개!</title>
-  {% load static %}
+
   <style>
     body {
       font-family: sans-serif;
@@ -63,7 +64,7 @@
 
   <h1>👋 이민지 자기소개</h1>
 
-  <!-- <img src="images/logo.jpg" alt="이민지 사진" class="profile-img"> -->
+  <img src="{% static 'images/logo.png' %}" alt="이민지 사진" class="profile-img">
 
 
   <div class="item">
